@@ -46,6 +46,17 @@ public class Slider2 {
         //攔截 ChangeListener
         //並將 slider.getValue() 填入 textField
         
+        slider.addChangeListener(new ChangeListener(){
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                textField.setText(""+slider.getValue()); //To change body of generated methods, choose Tools | Templates.
+            }
+        });    
+            
+            
+           
+        
+        
         
         ///////////////////////////////////////
         
