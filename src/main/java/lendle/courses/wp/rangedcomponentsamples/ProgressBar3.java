@@ -29,12 +29,12 @@ public class ProgressBar3 {
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
         //建立 ProgressMonitor
-        ProgressMonitor progressBar=null;
+        ProgressMonitor progressBar=new ProgressMonitor(frame,"123","downloading....",0,100);
         /////////////////////////
         Thread t=new Thread(){
             public void run(){
-                int i=0;
-                for(i=0; i<=100; i++){
+               
+                for(int i=0; i<=100; i++){
                     progressBar.setProgress(i);
                     try {
                         Thread.sleep(100);
@@ -45,7 +45,6 @@ public class ProgressBar3 {
             }
         };
         t.start();
-        
         frame.setVisible(true);
     }
 
